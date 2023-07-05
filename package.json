@@ -1,7 +1,7 @@
 {
-  "name": "react",
+  "name": "Links Notes",
   "version": "1.0.0",
-  "description": "React example starter project",
+  "description": "Project",
   "keywords": [
     "react",
     "starter"
@@ -12,7 +12,6 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.7",
     "firebase": "^8.2.1",
-    "flatlist-react": "^1.5.14",
     "loader-utils": "3.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
