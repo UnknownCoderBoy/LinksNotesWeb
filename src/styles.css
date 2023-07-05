@@ -1,4 +1,12 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
