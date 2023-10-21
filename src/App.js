@@ -61,29 +61,29 @@ export default function App() {
       if (urlPatternValidation(addUrl)) {
         // get the timestamp
         const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-        const url = "https://api.shrtco.de/v2/shorten?url=" + addUrl;
-        const response = await fetch(url);
-        const datas = await response.json();
-        if (datas.ok === true) {
-          const data = {
-            title: addTitle,
-            url: datas.result.full_short_link,
-            createdAt: timestamp,
-          };
-          linksDataRef
-            .add(data)
-            .then(() => {
-              // release todo state
-              setAddUrl("");
-              setAddTitle("");
-            })
-            .catch((error) => {
-              // show an alert in case of error
-              alert(error);
-            });
-        } else {
-          alert(datas.disallowed_reason);
-        }
+        // const url = "https://api.shrtco.de/v2/shorten?url=" + addUrl;
+        // const response = await fetch(url);
+        // const datas = await response.json();
+        // if (datas.ok === true) {
+        const data = {
+          title: addTitle,
+          url: addUrl,
+          createdAt: timestamp,
+        };
+        linksDataRef
+          .add(data)
+          .then(() => {
+            // release todo state
+            setAddUrl("");
+            setAddTitle("");
+          })
+          .catch((error) => {
+            // show an alert in case of error
+            alert(error);
+          });
+        // } else {
+        //   alert(datas.disallowed_reason);
+        // }
       } else {
         alert("Invalid Url");
       }
