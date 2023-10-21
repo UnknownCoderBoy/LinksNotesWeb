@@ -144,6 +144,9 @@ export default function App() {
                   <ListItemText
                     primary={item.title}
                     secondary={item.url}
+                    secondaryTypographyProps={{
+                      style: { wordWrap: "break-word" },
+                    }}
                     onClick={() => window.open(item.url, "_blank")}
                   />
                 </ListItemButton>
